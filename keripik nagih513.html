@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BananaBoom | Keripik Pisang Level Up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Pacifico&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --yellow: #FFD93D;
+            --dark-brown: #4D3421;
+            --soft-yellow: #FFF9E3;
+            --glass: rgba(255, 255, 255, 0.8);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #FFD93D 0%, #FF8400 100%);
+            background-attachment: fixed;
+            color: var(--dark-brown);
+        }
+
+        /* Navigasi */
+        nav {
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-family: 'Pacifico', cursive;
+            font-size: 28px;
+            color: var(--dark-brown);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 5%;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            text-shadow: 3px 3px 0px var(--dark-brown);
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            background: var(--dark-brown);
+            display: inline-block;
+            padding: 5px 20px;
+            border-radius: 50px;
+        }
+
+        /* Container Produk */
+        .container {
+            padding: 50px 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        /* Card Unik (Efek Glassmorphism) */
+        .card {
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 30px;
+            padding: 20px;
+            text-align: center;
+            transition: 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-15px) rotate(2deg);
+            background: white;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .card .price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #FF8400;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        /* Tombol Pesan WA */
+        .btn-wa {
+            display: block;
+            background: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            transition: 0.3s;
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
+        }
+
+        .btn-wa:hover {
+            background: #128c7e;
+            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 50px;
+            background: var(--dark-brown);
+            color: white;
+            margin-top: 50px;
+        }
+
+        /* Animasi Mengambang */
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .floating-img {
+            animation: floating 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">BananaBoom! 🍌</div>
+        <div style="font-weight: bold;">Menu Krispi</div>
+    </nav>
+
+    <section class="hero">
+        <h1 class="floating-img">KRIUKNYA JUARA!</h1>
+        <p>Keripik Pisang Kekinian • Tanpa Pengawet • 100% Pisang Pilihan</p>
+    </section>
+
+    <div class="container">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1599490659223-e1539e7af924?auto=format&fit=crop&w=500" alt="Cokelat">
+            <h3>Pisang Cokelat Lumer</h3>
+            <p>Dibalut cokelat Belgia yang tebal dan tidak pelit.</p>
+            <span class="price">Rp 15.000</span>
+            <a href="https://wa.me/628123456789?text=Halo!%20Saya%20mau%20pesan%20Pisang%20Cokelat%20Lumer" class="btn-wa">Pesan via WA</a>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1621447509374-f018e6900115?auto=format&fit=crop&w=500" alt="Keju">
+            <h3>Creamy Cheese</h3>
+            <p>Taburan keju melimpah, perpaduan manis dan asin yang pas.</p>
+            <span class="price">Rp 15.000</span>
+            <a href="https://wa.me/628123456789?text=Halo!%20Saya%20mau%20pesan%20Pisang%20Creamy%20Cheese" class="btn-wa">Pesan via WA</a>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1589334861110-33630f553a1a?auto=format&fit=crop&w=500" alt="Matcha">
+            <h3>Matcha Greentea</h3>
+            <p>Rasa teh hijau Jepang yang wangi dan eksklusif.</p>
+            <span class="price">Rp 18.000</span>
+            <a href="https://wa.me/628123456789?text=Halo!%20Saya%20mau%20pesan%20Pisang%20Matcha" class="btn-wa">Pesan via WA</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>Copyright &copy; 2024 **BananaBoom** - Dibuat oleh [Nama Kamu]</p>
+        <p style="font-size: 12px; margin-top: 10px; opacity: 0.7;">Tugas Kewirausahaan SMP Merdeka</p>
+    </footer>
+
+</body>
+</html>
